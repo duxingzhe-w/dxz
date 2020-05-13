@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript 简介</title>
+  <link rel="stylesheet" href="../CSS/CSS.css">
+</head>
+
+<body>
+  <h1>JavaScript 简介</h1>
+  <h2>JavaScript 能够改变 HTML 内容</h2>
+  <p><span class="red">getElementById()</span> 是多个 JavaScript HTML 方法之一。</p>
+  <p>本例使用该方法来“查找” id="demo" 的 HTML 元素，并把元素内容（<span class="red">innerHTML</span>）更改为 "Hello JavaScript"：</p>
+  <pre>document.<code>getElementById</code>("demo").<code>innerHTML</code> = "Hello JavaScript";</pre>
+  <div class="examples" id="ex1">
+    <h2>JavaScript 能做什么</h2>
+    <p id="demo">JavaScript 能够改变 HTML 内容。</p>
+    <button type="button" onClick="document.getElementById('demo').innerHTML='Hello JavaScript!'">点击我！</button>
+  </div>
+  <p class="tip"><strong>提示：</strong>JavaScript 同时接受双引号和单引号：</p>
+  <pre>document.getElementById("demo").innerHTML = 'Hello JavaScript';</pre>
+   
+  <hr>
+  
+  <h2>JavaScript 能够改变 HTML 属性</h2>
+  <p>本例通过改变 &lt;img&gt; 标签的 src 属性（source）来改变一张 HTML 图像：</p>
+  <div class="examples" id="ex2">
+    <p>JavaScript 改变了图像的 src 属性值。</p>
+    <button type="button" onClick="document.getElementById('myImage').src='../img/eg_bulbon.gif'">开灯</button>
+    <img id="myImage" border="0" src="../img/eg_bulboff.gif">
+    <button onClick="document.getElementById('myImage').src='../img/eg_bulboff.gif'">关灯</button>   
+  </div>
+    
+  <hr>
+  
+  <h2>JavaScript 能够改变 HTML 样式 (CSS)</h2>
+  <p>改变 HTML 元素的样式，是改变 HTML 属性的一种变种：</p>
+  <pre>document.getElementById("demo").<code>style</code>.fontSize = "25px";</pre>
+  <div class="examples" id="ex3">
+    <p id="p3">JavaScript 能够改变 HTML 元素的样式。</p>
+    <button type="button" onclick="document.getElementById('p3').style.fontSize='35px'">点击我！</button>
+  </div>
+   
+  <hr>
+  
+  <h2>JavaScript 能够隐藏 HTML 元素</h2>
+  <p>可通过改变 <span class="red">display</span> 样式来隐藏 HTML 元素：</p>
+  <pre>document.getElementById("demo").<code>style.display</code>="none";</pre>
+  <div class="examples" id="ex4">
+    <p id="p4">JavaScript 能够隐藏 HTML 元素。</p>
+    <button type="button" onclick="document.getElementById('p4').style.display='none'">点击我！</button>
+  </div>
+</body>
+</html>
